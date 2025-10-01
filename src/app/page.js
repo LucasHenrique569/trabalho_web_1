@@ -10,7 +10,7 @@ export default function Page() {
   const salvarDados = async (event) => {
     try {
       event.preventDefault();
-      const resposta = await fetch("/api/alunos", {
+      const resposta = await fetch("api/alunos", {
         method: "POST",
         headers: { "Content-type": "Application/json" },
         body: JSON.stringify({ nome: nome, matricula: matricula, curso: curso })
