@@ -15,7 +15,7 @@ export async function GET() {
 
 export async function POST(req) {
   try {
-    const collection = await getAlunosCollection();
+    const collection = await getBooksCollection();
     const { bookName, author, gender, price } = await req.json();
 
     if (!bookName || !author || !gender || !price) {
