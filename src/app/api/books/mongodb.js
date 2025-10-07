@@ -15,10 +15,10 @@ export async function connectDB(){
     }
     
     await clientPromise
-    return client.db("escolaDB")
+    return client.db("booksDB")
 }
 
-export async function getAlunosCollection(){
+export async function getBooksCollection(){
     const db = await connectDB()
-    return db.collection("alunos")
+    return db.collection("books")
 }
